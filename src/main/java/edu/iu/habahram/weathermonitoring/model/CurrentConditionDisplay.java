@@ -3,12 +3,10 @@ package edu.iu.habahram.weathermonitoring.model;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CurrentConditionDisplay
-        implements Observer, DisplayElement{
+public class CurrentConditionDisplay implements Observer, DisplayElement{
     private float temperature;
     private float humidity;
     private float pressure;
-
     private Subject weatherData;
 
     public CurrentConditionDisplay(Subject weatherData) {
