@@ -14,9 +14,7 @@ public class StatisticsDisplay implements Observer, DisplayElement{
         private ArrayList<Float> humidityList = new ArrayList<>();
         private ArrayList<Float> pressureList = new ArrayList<>();
 
-    public StatisticsDisplay(Subject weatherData) {
-            this.weatherData = weatherData;
-        }
+    public StatisticsDisplay(Subject weatherData) { this.weatherData = weatherData; }
 
         @Override
         public String display() {
@@ -69,11 +67,7 @@ public class StatisticsDisplay implements Observer, DisplayElement{
             avg_Pressure = sum_Pressure / pressureList.size();
         }
 
-        public void subscribe() {
-            weatherData.registerObserver(this);
-        }
+        public void subscribe() { weatherData.registerObserver(this); }
 
-        public void unsubscribe() {
-            weatherData.removeObserver(this);
-        }
+        public void unsubscribe() { weatherData.removeObserver(this); }
 }
